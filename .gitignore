@@ -1,0 +1,25 @@
+notes.md
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Build directories
+/bin/
+/out/
+/build/
+/target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.eclipse
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

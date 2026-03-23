@@ -84,4 +84,53 @@ public class Vehicle {
 public class Car extends Vehicle {
     // Car inherits start() method
 }
-`
+```
+
+## 9. **Method Overloading**
+Multiple methods with the same name but different parameters (compile-time/static polymorphism).
+
+```java
+public class Calculator {
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+    int add(int a, int b, int c) { return a + b + c; }
+}
+```
+## 10. **Method Overriding**
+A child class provides its own implementation of a method from the parent class.
+
+```java
+public class Animal {
+    void makeSound() { System.out.println("Generic sound"); }
+}
+
+public class Dog extends Animal {
+    @Override
+    void makeSound() { System.out.println("Bark"); }
+}
+```
+
+
+## 11. **Dynamic Method Dispatch**
+The decision of which method to call is made at runtime based on the actual object type (runtime/dynamic polymorphism).
+
+```java
+Animal animal = new Dog();
+animal.makeSound();  // Calls Dog's makeSound() at runtime, not Animal's
+```
+
+## 12. **Abstract Class**
+A class that cannot be instantiated and is meant to be extended by subclasses. It can contain both abstract and concrete methods.
+
+```java
+public abstract class Shape {
+    abstract double getArea();  // Must be implemented by subclasses
+    
+    void display() { System.out.println("Shape"); }  // Concrete method
+}
+
+public class Circle extends Shape {
+    @Override
+    double getArea() { return 3.14 * 5 * 5; }
+}
+```

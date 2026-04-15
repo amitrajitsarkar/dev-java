@@ -245,3 +245,88 @@ class Test {
 > "`throws` is used to declare an exception so that it can be handled by the calling method."
 
 ---
+
+# Partial vs Full Implementation (Interface)
+
+## 1. Full Implementation
+
+* A class implements **ALL methods** of the interface.
+* Class must be **non-abstract**.
+
+### Example
+
+```java
+interface Animal {
+    void sound();
+    void eat();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Bark");
+    }
+
+    public void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+        d.eat();
+    }
+}
+```
+
+✔ All methods implemented → **Full implementation**
+
+---
+
+## 2. Partial Implementation
+
+* A class implements **SOME methods only**
+* Then the class must be **abstract**
+
+### Example
+
+```java
+interface Animal {
+    void sound();
+    void eat();
+}
+
+abstract class Dog implements Animal {
+    public void sound() {
+        System.out.println("Bark");
+    }
+    // eat() not implemented
+}
+
+class Puppy extends Dog {
+    public void eat() {
+        System.out.println("Eating");
+    }
+}
+```
+
+✔ Not all methods implemented → **Partial implementation**
+
+---
+
+# Key Difference
+
+| Full                    | Partial                |
+| ----------------------- | ---------------------- |
+| All methods implemented | Some methods missing   |
+| Class is normal         | Class must be abstract |
+
+---
+
+# One line for exam
+
+* **Full**: “All interface methods are implemented in a class.”
+* **Partial**: “Only some methods are implemented; class becomes abstract.”
+
+---

@@ -15,12 +15,12 @@ class Dog extends Animal {
 
 class Cat extends Animal {
     @Override
-    void makeSound() {
+    void makeSound() {    
         System.out.println("Meow!");
     }
 }
 
-class Snake extends Animal {
+class Snake extends Animal {    
     // no override - uses parent's version
 }
 

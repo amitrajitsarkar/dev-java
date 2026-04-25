@@ -33,6 +33,7 @@ public class Fibonacci{
         int N = sc.nextInt();
         if(N<=0){
             System.err.print("Invalid length");
+            sc.close();
             return;
         }
         Fibonacci f = new Fibonacci(N);

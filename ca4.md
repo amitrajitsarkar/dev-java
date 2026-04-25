@@ -1,7 +1,6 @@
 Here’s a **compact, exam-oriented breakdown** of the three topics. Enough to write answers + basic understanding.
 
 ---
-
 # 1. PACKAGE (Java)
 
 ## What is a Package?
@@ -15,7 +14,6 @@ Here’s a **compact, exam-oriented breakdown** of the three topics. Enough to w
 * **User-defined packages**
 
 ## How to create
-
 ```java
 package mypack;
 
@@ -243,7 +241,6 @@ class Test {
 # One line for exam
 
 > "`throws` is used to declare an exception so that it can be handled by the calling method."
-
 ---
 
 # Partial vs Full Implementation (Interface)
